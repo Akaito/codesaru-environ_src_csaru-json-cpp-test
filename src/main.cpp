@@ -1,8 +1,19 @@
+#include "TestCase0.hpp"
+#include "TestCase2_0.hpp"
+#include "TestCase2_1.hpp"
+
 int main (int argc, char ** argv) {
 
-	argc;
-	argv;
+    ref(argc);
+    ref(argv);
 
-	return 0;
+    // test DataMap
+    TestCase0();
+
+    // test JsonParser
+    TestCase2_0();
+    TestCase2_1();
+
+    return 0;
 
 }

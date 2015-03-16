@@ -16,9 +16,15 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\TestCase0.cpp" />
+    <ClCompile Include="src\TestCase2_0.cpp" />
+    <ClCompile Include="src\TestCase2_1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\StdAfx.h" />
+    <ClInclude Include="src\TestCase0.hpp" />
+    <ClInclude Include="src\TestCase2_0.hpp" />
+    <ClInclude Include="src\TestCase2_1.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A34A1937-C9DC-4D49-A6E4-B175051F64CE}</ProjectGuid>
@@ -45,10 +51,18 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(SolutionDir)..\csaru-environ-cpp-solution.props" />
+    <Import Project="..\csaru-container-cpp\import-csaru-container-cpp.props" />
+    <Import Project="..\csaru-core-cpp\import-csaru-core-cpp.props" />
+    <Import Project="..\csaru-serialization-cpp\import-csaru-serialization-cpp.props" />
+    <Import Project="..\csaru-json-cpp\import-csaru-json-cpp.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(SolutionDir)..\csaru-environ-cpp-solution.props" />
+    <Import Project="..\csaru-container-cpp\import-csaru-container-cpp.props" />
+    <Import Project="..\csaru-core-cpp\import-csaru-core-cpp.props" />
+    <Import Project="..\csaru-serialization-cpp\import-csaru-serialization-cpp.props" />
+    <Import Project="..\csaru-json-cpp\import-csaru-json-cpp.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "encoding": "UTF-8",
+  "feed": {
+    "entry": [{
+      "id": {"$t": "..."},
+      "gd$transparency": {"value": "http://schemas.google.com/g/2005#event.opaque"},
+      "gd$eventStatus": {"value": "http://schemas.google.com/g/2005#event.confirmed"},
+      "gd$comments": {"gd$feedLink": {"href": "..."}},
+      "gCal$sendEventNotifications": {"value": "true"},
+      "gd$when": [{
+        "startTime": "2006-11-15",
+        "endTime": "2006-11-17",
+        "gd$reminder": [{"minutes": "10"}]
+      }]
+	}]
+  }
+}

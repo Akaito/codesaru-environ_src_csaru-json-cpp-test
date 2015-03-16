@@ -12,9 +12,27 @@
     <ClCompile Include="src\StdAfx.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\TestCase0.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TestCase2_0.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TestCase2_1.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\StdAfx.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TestCase0.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TestCase2_0.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TestCase2_1.hpp">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

@@ -5,3 +5,5 @@ __pycache__
 Debug
 Release
 *vcxproj*.user
+
+working-dir/out_test-*

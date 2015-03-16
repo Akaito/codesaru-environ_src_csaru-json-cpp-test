@@ -1,0 +1,23 @@
+{
+  "__type__" : "GameObjectBlueprint",
+  "Block" : {
+    "__type__" : "GameObject",
+    "Components" : [
+      {
+        "__type__" : "Transform",
+        "Position" : {
+          "__type__" : "Vector3",
+          0.0,
+          0.0,
+          0.0
+        },
+        "Scale" : {
+          "__type__" : "Vector3",
+          1.0,
+          1.0,
+          1.0
+        }
+      }
+    ]
+  }
+}
