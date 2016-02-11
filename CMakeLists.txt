@@ -16,5 +16,6 @@ set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 11)
 
 CSaru_Depends("csaru-core-cpp")
 CSaru_Depends("csaru-container-cpp")
+CSaru_Depends("csaru-json-cpp")
 CSaru_Depends("csaru-serialization-cpp")
 
