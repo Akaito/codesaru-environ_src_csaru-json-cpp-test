@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2015 Christopher Higgins Barrett
+Copyright (c) 2016 Christopher Higgins Barrett
 
 This software is provided 'as-is', without any express or implied
 warranty. In no event will the authors be held liable for any damages
@@ -18,14 +18,15 @@ freely, subject to the following restrictions:
 3. This notice may not be removed or altered from any source distribution.
 */
 
+#include <cstdio>
+#include <cstring>
+
+#include <csaru-container-cpp/DataMap.hpp>
+#include <csaru-json-cpp/JsonParser.hpp>
+#include <csaru-json-cpp/JsonParserCallbackForDataMap.hpp>
+#include <csaru-json-cpp/JsonGenerator.hpp>
+
 #include "TestCase2_0.hpp"
-
-#include <stdio.h>
-
-#include <JsonParser.hpp>
-#include <DataMap.hpp>
-#include <JsonParserCallbackForDataMap.hpp>
-#include <JsonGenerator.hpp>
 
 struct TestCaseData {
   const char* string;
@@ -240,7 +241,11 @@ bool TestCase2_0(void) {
         CSaruJson::JsonParserCallbackForDataMap callback(map.GetMutator());
 
         parser.Reset();
-        parser.ParseBuffer(s_testDataArray[i].string, strlen(s_testDataArray[i].string), &callback);
+        parser.ParseBuffer(
+			s_testDataArray[i].string,
+			strlen(s_testDataArray[i].string),
+			&callback
+		);
         bool passed = parser.GetErrorCode() < CSaruJson::JsonParser::ErrorStatus::Error_Unspecified;
         if (passed != desired_result) {
             //printf("Failed test #%d.  Should have %s.  Test data was:\n%s\n",

@@ -7,7 +7,7 @@ cmake_minimum_required(VERSION 3.2)
 #	file if you need finer control over your project.
 include($ENV{CSaruDir}/cmake/CSaru.cmake)
 # Pass the version of your project; it's not related to the CSaruEnviron.
-CSaru_Lib(1.4)
+CSaru_Bin_Console(1.5)
 
 # Custom stuff hand-edited into this CMakeLists ...
 
@@ -16,4 +16,5 @@ set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 11)
 
 CSaru_Depends("csaru-core-cpp")
 CSaru_Depends("csaru-container-cpp")
+CSaru_Depends("csaru-serialization-cpp")
 

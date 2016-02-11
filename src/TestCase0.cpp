@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2015 Christopher Higgins Barrett
+Copyright (c) 2016 Christopher Higgins Barrett
 
 This software is provided 'as-is', without any express or implied
 warranty. In no event will the authors be held liable for any damages
@@ -18,11 +18,13 @@ freely, subject to the following restrictions:
 3. This notice may not be removed or altered from any source distribution.
 */
 
+#include <cassert>
+
+#include <csaru-container-cpp/DataMap.hpp>
+#include <csaru-container-cpp/DataMapReader.hpp>
+#include <csaru-json-cpp/JsonGenerator.hpp>
+
 #include "TestCase0.hpp"
-#include <assert.h>
-#include <DataMap.hpp>
-#include <DataMapReader.hpp>
-#include <JsonGenerator.hpp>
 
 using CSaruContainer::DataMap;
 using CSaruContainer::DataMapMutator;

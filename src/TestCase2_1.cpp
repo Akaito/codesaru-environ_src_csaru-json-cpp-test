@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2015 Christopher Higgins Barrett
+Copyright (c) 2016 Christopher Higgins Barrett
 
 This software is provided 'as-is', without any express or implied
 warranty. In no event will the authors be held liable for any damages
@@ -19,17 +19,17 @@ freely, subject to the following restrictions:
 */
 
 #ifdef _MSC_VER
-    #pragma warning(push)
+#	pragma warning(push)
     // fopen() unsafe.  Not using fopen_s for platform independence.
-    #pragma warning(disable: 4996)
+#	pragma warning(disable: 4996)
 #endif
 
 #include "TestCase2_1.hpp"
 
-#include <JsonParser.hpp>
-#include <DataMap.hpp>
-#include <JsonParserCallbackForDataMap.hpp>
-#include <JsonGenerator.hpp>
+#include <csaru-container-cpp/DataMap.hpp>
+#include <csaru-json-cpp/JsonParser.hpp>
+#include <csaru-json-cpp/JsonParserCallbackForDataMap.hpp>
+#include <csaru-json-cpp/JsonGenerator.hpp>
 
 struct TestCaseData {
     const char *                        string;
@@ -82,7 +82,7 @@ bool TestCase2_1(void) {
         if (errorCode != s_testDataArray[i].errorCode) {
             printf(
                 "  Failed test 2_1.%d.  JsonParser returned the wrong error code.\n  Was %d, expected %d.",
-                errorCode, s_testDataArray[i].errorCode
+                i, int(errorCode), int(s_testDataArray[i].errorCode)
             );
             abort();
             return false;
@@ -108,5 +108,5 @@ bool TestCase2_1(void) {
 }
 
 #ifdef _MSC_VER
-    #pragma warning(pop)
+#	pragma warning(pop)
 #endif

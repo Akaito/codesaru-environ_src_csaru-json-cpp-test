@@ -1,3 +1,5 @@
+#include <csaru-core-cpp/csaru-core-cpp.h> // ref()
+
 #include "TestCase0.hpp"
 #include "TestCase2_0.hpp"
 #include "TestCase2_1.hpp"
