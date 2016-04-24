@@ -1,4 +1,4 @@
-#include <csaru-core-cpp/csaru-core-cpp.h> // ref()
+#include <csaru-core-cpp/csaru-core-cpp.h> // unused()
 
 #include "TestCase0.hpp"
 #include "TestCase2_0.hpp"
@@ -6,8 +6,8 @@
 
 int main (int argc, char ** argv) {
 
-    ref(argc);
-    ref(argv);
+    unused(argc);
+    unused(argv);
 
     // test DataMap
     TestCase0();
