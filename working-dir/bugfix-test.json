@@ -1,0 +1,18 @@
+{
+	"data": [
+		{
+			"attributes": {
+				"components": {
+					"array": [
+						{
+							"properties": {
+								"src_rect": [512, 1280, 128, 256]
+							}
+						}
+					]
+				}
+			}
+		}
+	]
+}
+

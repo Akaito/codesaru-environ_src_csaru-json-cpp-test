@@ -20,15 +20,15 @@ freely, subject to the following restrictions:
 
 #include <cassert>
 
-#include <csaru-container-cpp/DataMap.hpp>
-#include <csaru-container-cpp/DataMapReader.hpp>
+#include <csaru-datamap-cpp/DataMap.hpp>
+#include <csaru-datamap-cpp/DataMapReader.hpp>
 #include <csaru-json-cpp/JsonGenerator.hpp>
 
 #include "TestCase0.hpp"
 
-using CSaruContainer::DataMap;
-using CSaruContainer::DataMapMutator;
-using CSaruContainer::DataMapReader;
+using CSaruDataMap::DataMap;
+using CSaruDataMap::DataMapMutator;
+using CSaruDataMap::DataMapReader;
 using CSaruJson::JsonGenerator;
 
 void TestCase0(void) {

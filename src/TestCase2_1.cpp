@@ -26,7 +26,7 @@ freely, subject to the following restrictions:
 
 #include "TestCase2_1.hpp"
 
-#include <csaru-container-cpp/DataMap.hpp>
+#include <csaru-datamap-cpp/DataMap.hpp>
 #include <csaru-json-cpp/JsonParser.hpp>
 #include <csaru-json-cpp/JsonParserCallbackForDataMap.hpp>
 #include <csaru-json-cpp/JsonGenerator.hpp>
@@ -37,7 +37,6 @@ struct TestCaseData {
 };
 
 static const TestCaseData s_testDataArray[] = {
-  //*
     {"string_test.json",                       CSaruJson::JsonParser::ErrorStatus::Done},
     {"out_test-string_test.json",              CSaruJson::JsonParser::ErrorStatus::Done}, // requires first test
     {"type_test0.json",                        CSaruJson::JsonParser::ErrorStatus::ParseError_ExpectedString},
@@ -45,8 +44,9 @@ static const TestCaseData s_testDataArray[] = {
     {"type_test1.json",                        CSaruJson::JsonParser::ErrorStatus::ParseError_ExpectedValue},
     {"google_example-adjusted.json",           CSaruJson::JsonParser::ErrorStatus::ParseError_ExpectedValue},
     {"google_example-adjusted-2.json",         CSaruJson::JsonParser::ErrorStatus::Done},
-    {"google_example-adjusted-2-smaller.json", CSaruJson::JsonParser::ErrorStatus::Done}
-  //*/
+    {"google_example-adjusted-2-smaller.json", CSaruJson::JsonParser::ErrorStatus::Done},
+    {"bugfix-test.json",                       CSaruJson::JsonParser::ErrorStatus::Done},
+    {"jsonapi-multiple-data.json",             CSaruJson::JsonParser::ErrorStatus::Done}
 };
 static const int s_testCount = sizeof(s_testDataArray) / sizeof(s_testDataArray[0]);
 
@@ -69,7 +69,7 @@ bool TestCase2_1(void) {
             continue;
         }
 
-        CSaruContainer::DataMap map;
+        CSaruDataMap::DataMap map;
         CSaruJson::JsonParserCallbackForDataMap callback(map.GetMutator());
 
         parser.Reset();
@@ -92,7 +92,7 @@ bool TestCase2_1(void) {
         }
 
         printf("  Map looked like:\n\n");
-        CSaruContainer::DataMapReader reader = map.GetReader();
+        CSaruDataMap::DataMapReader reader = map.GetReader();
         CSaruJson::JsonGenerator::WriteToStream(&reader, stdout);
 
         //*

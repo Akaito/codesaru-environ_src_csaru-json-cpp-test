@@ -21,7 +21,7 @@ freely, subject to the following restrictions:
 #include <cstdio>
 #include <cstring>
 
-#include <csaru-container-cpp/DataMap.hpp>
+#include <csaru-datamap-cpp/DataMap.hpp>
 #include <csaru-json-cpp/JsonParser.hpp>
 #include <csaru-json-cpp/JsonParserCallbackForDataMap.hpp>
 #include <csaru-json-cpp/JsonGenerator.hpp>
@@ -237,7 +237,7 @@ bool TestCase2_0(void) {
         printf("\n  Test 2_0.%d.  Should be %s.\n", i, desired_result ? "valid" : "invalid");
         printf("  Looks like:\n%s\n\n", s_testDataArray[i].string);
 
-        CSaruContainer::DataMap map;
+        CSaruDataMap::DataMap map;
         CSaruJson::JsonParserCallbackForDataMap callback(map.GetMutator());
 
         parser.Reset();
@@ -261,7 +261,7 @@ bool TestCase2_0(void) {
         }
 
         printf("  Map looked like:\n\n");
-        CSaruContainer::DataMapReader reader = map.GetReader();
+        CSaruDataMap::DataMapReader reader = map.GetReader();
         CSaruJson::JsonGenerator::WriteToStream(&reader, stdout);
     }
 
