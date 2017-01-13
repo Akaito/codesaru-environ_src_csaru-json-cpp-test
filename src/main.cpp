@@ -1,4 +1,4 @@
-#include <csaru-core-cpp/csaru-core-cpp.h> // unused()
+#include <csaru-core-cpp/csaru-core-cpp.hpp> // unused()
 
 #include "TestCase0.hpp"
 #include "TestCase2_0.hpp"

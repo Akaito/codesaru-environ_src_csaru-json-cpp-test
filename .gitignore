@@ -11,8 +11,10 @@ Release
 *.sdf
 
 # nix
-Makefile
+*.d
+*.o
 *.a
+csaru-json-cpp-test
 
 # CMake
 CMakeFiles

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pushd ../working-dir
-$CSaruDir/bin/csaru-json-cpp-test
+pushd working-dir
+../csaru-json-cpp-test
 popd
 
